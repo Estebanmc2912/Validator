@@ -6,6 +6,7 @@ import android.util.Log
 import android.view.View
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_main.view.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -31,7 +32,8 @@ class MainActivity : AppCompatActivity() {
     fun onClickBtnLuckyNumber(v : View){
         if(checkValidation(et_cardnuber.text.toString())){ validation = "true" }else{ validation = "false" }
         Toast.makeText(this@MainActivity, validation, Toast.LENGTH_LONG).show()
-        mostRepitNumber(et_cardnuber.text.toString())
+        var number : String = mostRepitNumber(et_cardnuber.text.toString())
+        tv_description.setText("Número de la suerte: " + number[1])
     }
 
     fun checkValidation(str : String) : Boolean{
@@ -49,6 +51,7 @@ class MainActivity : AppCompatActivity() {
         println(numbersByElement)
 
         // This is an optional function but i don't want to use it beacuse increments algorithm complex O(n2)
+        // I preffer to use android library functions
        /* for (i in mutableList!!){
             var cont = 1
             for (j in listNumbers!!){
@@ -61,7 +64,7 @@ class MainActivity : AppCompatActivity() {
 
         var mostrepetitivenumber = listNumbers?.groupingBy { it }?.eachCount()?.toList()?.sortedByDescending { it.second }?.take(1)
 
-        return mostrepetitivenumber.toString()
+        return mostrepetitivenumber?.first().toString()
     }
 
 }
