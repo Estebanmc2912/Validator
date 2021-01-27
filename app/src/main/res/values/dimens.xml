@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="cl_cardnumber_marginTop">100dp</dimen>
+    <dimen name="cl_cardnumber_marginStart">20dp</dimen>
+    <dimen name="tv_description_marginTop">50dp</dimen>
+</resources>

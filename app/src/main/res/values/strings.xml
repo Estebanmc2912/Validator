@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Validator</string>
+    <string name="tv_title_cardnumber">Card Number</string>
+    <string name="btn_lucknumber">calculor número de la suerte</string>
+    <string name="tv_decription">Número de la suerte: 7</string>
+</resources>
